@@ -10,7 +10,7 @@
 
     - name: debug date
       debug:
-        msg: '{{ date }}'
+        msg: '{{ date.stdout }}'
 
     - name: get server date for log files
       shell:  date +'%Y-%m-%d-%H'
@@ -23,3 +23,7 @@
       register: dhcp_date
       delegate_to:  localhost
       run_once: true
+
+    - name: debug dhcp date
+      debug:
+        msg: '{{ dhcp_date.stdout }}'

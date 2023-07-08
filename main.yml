@@ -1,5 +1,5 @@
 - name: DHCP ip-topup
-  hosts:  localhost
+  hosts:  test
   gather_facts: no
   tasks:
     - name: get server date for receiving file

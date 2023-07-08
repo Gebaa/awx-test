@@ -39,4 +39,4 @@
         dest: /tmp/mine.conf
         owner: ansible_rw
         group: ansible_rw
-        mode:'775'
+        mode: '775'

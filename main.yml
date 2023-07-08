@@ -28,7 +28,7 @@
       debug:
         msg: '{{ dhcp_date.stdout }}'
 
-     - name: Print hosts list
+    - name: Print hosts list
        debug:
          #msg: "{{ group_names }}"
          msg: "{{ inventory_hostname }}"

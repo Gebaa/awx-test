@@ -33,12 +33,10 @@
         #msg: "{{ group_names }}"
         msg: "{{ inventory_hostname }}"
 
-    - name: Install nginx
-      yum:
-        name: nginx
-        state: absent
-
-    - name: Start nginx
-      service:
-        name: nginx
-        state: started
+    - name: Copy using inline content
+      copy:
+        content: '# This file was moved to /etc/other.conf'
+        dest: /tmp/mine.conf
+        owner: ansible_rw
+        group: ansible_rw
+        mode:'775'

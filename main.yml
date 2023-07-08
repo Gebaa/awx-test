@@ -27,3 +27,18 @@
     - name: debug dhcp date
       debug:
         msg: '{{ dhcp_date.stdout }}'
+
+     - name: Print hosts list
+       debug:
+         #msg: "{{ group_names }}"
+         msg: "{{ inventory_hostname }}"
+
+    -  name: Install nginx
+       yum:
+         name: nginx
+         state: latest
+
+    -  name: Start nginx
+       service:
+         name: nginx
+         state: started
